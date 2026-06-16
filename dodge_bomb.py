@@ -13,7 +13,6 @@ DELTA = {
 }
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-
 def check_bound(rct: pg.Rect) -> tuple[bool, bool]:
     """
     引数：効果トンRect or 爆弾Rect
@@ -60,7 +59,6 @@ def gameover(screen: pg.Surface) -> None:
 
     time.sleep(5)
 
-
 # ★【追記】10段階の爆弾画像と加速度のリストを生成する関数
 def init_bb() -> tuple[list[pg.Surface], list[int]]:
     """
@@ -78,7 +76,6 @@ def init_bb() -> tuple[list[pg.Surface], list[int]]:
     bb_accs = [a for a in range(1, 11)] # 加速度リスト [1, 2, ..., 10]
     
     return bb_imgs, bb_accs
-
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
@@ -149,7 +146,6 @@ def main():
         pg.display.update()
         tmr += 1
         clock.tick(50)
-
 
 if __name__ == "__main__":
     pg.init()
